@@ -25,8 +25,21 @@
       <button id="post-btn" class="marg-bot-20">Post It!</button>
       <h2>Your Posts</h2>
       <ul id="posts-list-el">
-        <li>hey there bud, this is what i look like!</li>
-        <li>here i am again</li>
+        <li>
+          <div class="post-card">
+            To ${receiverName}, <br />
+            ${postValue} <br />
+            From ${senderName}
+          </div>
+        </li>
+        <li>
+          <div class="post-card">
+            To APPLE, <br />
+            This is a post! A great post! It's here for all to wonder at.
+            <br />
+            From PEAR
+          </div>
+        </li>
       </ul>
     </div>
     <script src="index.js" type="module"></script>
