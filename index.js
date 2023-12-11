@@ -15,17 +15,21 @@ const app = initializeApp(appSettings);
 const database = getDatabase(app);
 const postsInDB = ref(database, "posts");
 
-const inputFieldEl = document.getElementById("msg-el");
+const messageFieldEl = document.getElementById("msg-el");
+const toFieldEl = document.getElementById("to-el");
+const fromFieldEl = document.getElementById("from-el");
 const postButtonEl = document.getElementById("post-btn");
 const postListEl = document.getElementById("posts-list-el");
 
 postButtonEl.addEventListener("click", function () {
-  let inputValue = inputFieldEl.value;
+  const messageValue = messageFieldEl.value;
+  const toValue = toFieldEl.value;
+  const fromValue = fromFieldEl.value;
 
-  push(postsInDB, inputValue);
-  console.log(`${inputValue} added to database`);
+  push(postsInDB, messageValue);
+  console.log(`${messageValue} added to database`);
 
-  clearInputFieldEl();
+  clearMessageFieldEl();
 });
 
 onValue(postsInDB, function (snapshot) {
@@ -46,8 +50,8 @@ onValue(postsInDB, function (snapshot) {
   }
 });
 
-function clearInputFieldEl() {
-  inputFieldEl.value = "";
+function clearMessageFieldEl() {
+  messageFieldEl.value = "";
 }
 
 function clearPostsEl() {
