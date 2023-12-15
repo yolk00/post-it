@@ -1,2 +1,2 @@
 # post-it
-practice project where you can post notes and messages on your "wall"
+practice project where you can post notes and messages to be sent by Courier.
