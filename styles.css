@@ -90,6 +90,10 @@ ul li:hover {
   cursor: pointer;
 }
 
+li {
+  white-space: preserve-breaks;
+}
+
 .marg-bot-20 {
   margin-bottom: 20px;
 }
